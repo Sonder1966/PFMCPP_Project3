@@ -48,6 +48,7 @@ Sub Object 2: Instrument Cluster
         2) revs
         3) GPS
         4) fuel
+
     Name 3 things you can do with the:   Instrument Cluster
         1) view speed
         2) view revs
@@ -55,9 +56,10 @@ Sub Object 2: Instrument Cluster
     
 Sub Object 3: Environment Controls
     Name 3 things you'll find on the:    Environment Controls
-        1) AC
+        1) ac
         2) heater
         3) temperature
+
     Name 3 things you can do with the:   Environment Controls
         1) control ac
         2) control heat
@@ -68,6 +70,7 @@ Sub Object 4: Infotainment System
         1) radio
         2) cd
         3) volume
+
     Name 3 things you can do with the:   Infotainment System
         1) change radio station
         2) choose cd
@@ -78,6 +81,7 @@ Sub Object 5: Seat
         1) seat belt
         2) heater
         3) position adjut
+        
     Name 2 things you can do with the:   Seat
         1) set heat
         2) adjust position
