@@ -72,7 +72,7 @@ Thing 2) airport
 5 properties:
     1) number of planes
     2) employs floor satff
-    3) service aerplances
+    3) service aeroplanes
     4) number of runways
     5) tracks with radar
 3 things it can do:
