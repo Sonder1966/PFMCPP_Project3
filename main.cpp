@@ -54,59 +54,59 @@ Thing: Car Wash
  */
 
 /*
-Thing 1)
+Thing 1) DAW
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) stores digital data
+    2) prompts user input
+    3) hosts plugins
+    4) automates process
+    5) generates sound
 3 things it can do:
-    1)
-    2)
-    3)
+    1) master music
+    2) process audio
+    3) mix music
  */
 
 /*
-Thing 2)
+Thing 2) airport
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of planes
+    2) employs floor satff
+    3) service aerplances
+    4) number of runways
+    5) tracks with radar
 3 things it can do:
-    1)
-    2)
-    3)
+    1) land and takeoff planes
+    2) centralise travel departure
+    3) service travel industry
  */
 
 /*
-Thing 3)
+Thing 3) farm
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of chickens
+    2) number of cows
+    3) single farmer
+    4) the amount of feed per week
+    5) the amount of milk produced
 3 things it can do:
-    1)
-    2)
-    3)
+    1) grow veg
+    2) rear animals
+    3) produce milk
  */
 
 /*
-Thing 4)
+Thing 4) school
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of students
+    2) number of teachers
+    3) hours per week of teaching
+    4) hours per week of lunch
+    5) separate classromms
 3 things it can do:
-    1)
-    2)
-    3)
+    1) educate children
+    2) employ adults
+    3) develope children social skills
  */
 
 
