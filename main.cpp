@@ -110,7 +110,7 @@ Thing 4) school
 3 things it can do:
     1) educate children
     2) employ adults
-    3) develope children social skills
+    3) play sports
  */
 
 
