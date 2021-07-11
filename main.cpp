@@ -152,7 +152,7 @@ Thing 10) truck
     2)engine
     3)seats
     4)steering wheel
-    5)fuel capacity
+    5)fuel system
 3 things it can do:
     1)carry people
     2)tow vehicles
