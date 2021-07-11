@@ -146,17 +146,17 @@ Thing 4) school
  */
 
 /*
-Thing 10) audio compressor
+Thing 10) truck
 5 properties:
-    1)input
-    2)output
-    3)make up gain
-    4)threshold
-    5)ratio
+    1)wheels
+    2)engine
+    3)number of passanger 
+    4)speed
+    5)colour
 3 things it can do:
-    1)compress signal
-    2)limit signal
-    3)amplify signal
+    1)carry people
+    2)tow vehicles
+    3)drive long distance
  */
 
 /*
