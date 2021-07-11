@@ -54,19 +54,7 @@ Part1 will be broken up into 5 separate steps
     Move the Thing 10 pseudo-code to after your Thing1-4 in the project.
 */
 
-/*
-Thing 10)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
+
 
 
 
@@ -157,7 +145,19 @@ Thing 4) school
     3) play sports
  */
 
-
+/*
+Thing 10) audio compressor
+5 properties:
+    1)input
+    2)output
+    3)make up gain
+    4)threshold
+    5)ratio
+3 things it can do:
+    1)compress signal
+    2)limit signal
+    3)amplify signal
+ */
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
