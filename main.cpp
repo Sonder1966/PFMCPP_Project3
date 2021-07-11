@@ -150,8 +150,8 @@ Thing 10) truck
 5 properties:
     1)wheels
     2)engine
-    3)number of passanger 
-    4)speed
+    3)seats
+    4)steering wheel
     5)colour
 3 things it can do:
     1)carry people
