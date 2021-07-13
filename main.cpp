@@ -67,82 +67,10 @@ Part1 will be broken up into 5 separate steps
     example: 
         If #10's first property was 'Engine', then your `Thing 5)` will be `Engine` and 
         you will need to provide 5 properties and 3 member functions of that Engine object in plain English
-*/
-
-/*
-Thing 5)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-/*
-Thing 6)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-/*
-Thing 7)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-/*
-Thing 8)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
-
-/*
-Thing 9)
-5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
-3 things it can do:
-    1)
-    2)
-    3)
- */
 
 
 
 
-/*
 Thing 1) DAW
 5 properties:
     1) amount of memory
@@ -201,6 +129,78 @@ Thing 4) school
     2) employ adults
     3) play sports
  */
+
+
+/*
+Thing 5) wheels
+5 properties:
+    1) wheel diameter
+    2) wheel width
+    3) amount of lug nuts
+    4) tyre thread depth
+    5) tyre pressure
+3 things it can do:
+    1) carry vehicle
+    2) aid suspension
+    3) turn vehicle
+ */
+
+/*
+Thing 6) engine
+5 properties:
+    1) engine type
+    2) engine capacity
+    3) amount of valves
+    4) engine torque
+    5) engine sound level
+3 things it can do:
+    1) move truck
+    2) power AC
+    3) power ABS
+ */
+
+/*
+Thing 7) seats
+5 properties:
+    1) number of seats
+    2) seat width
+    3) seat recline angle
+    4) seat heating
+    5) seat forward movement
+3 things it can do:
+    1) seat driver
+    2) heat passenger
+    3) adjust position
+ */
+
+/*
+Thing 8) steering wheel
+5 properties:
+    1) wheel diameter
+    2) wheel circumference
+    3) rotation amount
+    4) hands free kit controls
+    5) entertainment controls
+3 things it can do:
+    1) steer truck
+    2) instrument padel control
+    3) hands free control
+ */
+
+/*
+Thing 9) fuel system
+5 properties:
+    1) fuel injection pressure
+    2) fuel type
+    3) fuel capacity
+    4) fuel filter amount
+    5) fuel pump power
+3 things it can do:
+    1) power engine
+    2) spark plugs 
+    3) not freeze at 0 degrees
+ */
+
 
 /*
 Thing 10) truck
