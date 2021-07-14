@@ -169,14 +169,14 @@ struct DAW
     struct DAWProperties
     {
         bool canRecordMidi = true;
-        bool canRecordAudio =true;
+        bool canRecordAudio = true;
         float FrameRate = 29.23f;
         double bufferSize = 256.5;
         int numberOfWindow = 3;
 
         void multiRecord();
         void playVideo();
-        void convertMidi ();
+        void convertMidi();
     };
     
     //master music
@@ -184,7 +184,7 @@ struct DAW
     //process audio
     int processAudio(int NumberOfTracks = 24);
     //mix music
-    float mixMusic (float audioLevel = 0.9f);
+    float mixMusic(float audioLevel = 0.9f);
 
 };
 
@@ -204,10 +204,10 @@ Thing 2) airport
  */
 
    
-struct airport
+struct Airport
 {
     //number of planes
-    int numberOfPlanes =10;
+    int numberOfPlanes = 10;
     //number of floor staff
     int numberOfFloorStaff = 100;
     //number of aeroplane engineers
@@ -215,14 +215,14 @@ struct airport
     //number of runways
     int numberOfRunways = 5;
     //number of radar
-    int numberOfRAdar =1;
+    int numberOfRAdar = 1;
 
     //land and takeoff planes
-    void landAndTakeOffPlanes (bool hasConfirmation = true);
+    void landAndTakeOffPlanes(bool hasConfirmation = true);
     //centralise travel departure
-    void centraliseTravelDeparture (); 
+    void centraliseTravelDeparture(); 
     //service travel industry
-    void serviceTravelIndustry (bool notOvercapacity);
+    void serviceTravelIndustry(bool notOvercapacity);
 
 };
 
@@ -243,7 +243,7 @@ Thing 3) farm
  */
 
 
-struct farm
+struct Farm
 {
     //number of chickens
     int numberOfChickens = 20;
@@ -259,9 +259,9 @@ struct farm
     //grow veg
     void growVeg(std:: string vegType, int carrots);
     //rear animals
-    void rearAnimals (bool hasChickens);
+    void rearAnimals(bool hasChickens);
     //produce milk
-    void produceMilk (int numberOfLitres =100);
+    void produceMilk(int numberOfLitres = 100);
 
 };
 
@@ -280,7 +280,7 @@ Thing 4) school
     2) employ adults
     3) play sports
  */
-struct school
+struct School
 {
     //number of students
     int numberOfStudents = 100;
@@ -294,7 +294,7 @@ struct school
     int amountOfWhiteBoards = 5;
 
 
-    struct schoolStaff
+    struct SchoolStaff
     {
         int staffRoom = 1;
         int numberOfFullTime = 5;
@@ -302,8 +302,8 @@ struct school
         double totalHoursAllStaff = 110;
         int StaffCarParkSpaces = 10;
 
-        void totalBreakTime (int = 36);
-        void staffStudentRatio (int = 5);
+        void totalBreakTime(int = 36);
+        void staffStudentRatio(int = 5);
         void staffTrainer();
 
     };
@@ -314,7 +314,7 @@ struct school
     //employ adults
     void employAdults(std::string Over21Yo);
     //play sports
-    bool playSports (bool notRaining = true);
+    bool playSports(bool notRaining = true);
 
 };
 
@@ -332,7 +332,7 @@ Thing 5) wheels
     2) aid suspension
     3) turn vehicle
  */
-struct wheels
+struct Wheels
 {
 
     //wheel diameter
@@ -349,9 +349,9 @@ struct wheels
     //carry vehicle
     void carryVehicle();
     //aid suspension
-    void aidSuspension (float maxPressureSetting);
+    void aidSuspension(float maxPressureSetting);
     //turn vehicle
-    void turnVehicle (double SetmaxDegree);
+    void turnVehicle(double SetmaxDegree);
 
 };
 
@@ -374,7 +374,7 @@ Thing 6) engine
     3) power ABS
  */
 
-struct engine
+struct Engine
 {
     //engine type
     bool engineTypeDiesel = true; 
@@ -388,11 +388,11 @@ struct engine
     float SPL = 34.5f;
 
     //move truck
-    void moveTruck (int forward);
+    void moveTruck(int forward);
     //power AC
-    void powerAC (int temperature);
+    void powerAC(int temperature);
     //power ABS
-    void ABS (int ABS);
+    void ABS(int ABS);
 
 };
 
@@ -410,14 +410,14 @@ Thing 7) seats
     2) heat passenger
     3) adjust position
  */
-struct seats
+struct Seats
 {
     //number of seats
     int numberSeats = 4;
     //seat width
     int seatWidth = 30;
     //seat recline angle
-    float reclineAngle =44.3f;
+    float reclineAngle = 44.3f;
     //seat heating
     bool seatHeating = true;
     //seat forward movement
@@ -426,9 +426,9 @@ struct seats
     //seat driver
     void seatDriver();
     //heat passenger
-    void heatPassangerSeat ();
+    void heatPassangerSeat();
     //adjust position
-    void adjustSeatPosition ();
+    void adjustSeatPosition();
 
 };
 
@@ -447,21 +447,21 @@ Thing 8) steering wheel
     2) instrument padel control
     3) hands free control
  */
-struct steeringwheel
+struct SteeringWheel
 {
     //wheel diameter
     int wheelDiameter = 60;
     //wheel circumference
     int wheelCircumference = 10;
     //rotation amount
-    int rotationAmount =360;
+    int rotationAmount = 360;
     //hands free kit controls
     int handsFreeKit = 2;
     //entertainment controls
     int entertainmentControl = 1;
 
     //steer truck
-    void steerTruck (int degrees);
+    void steerTruck(int degrees);
     //instrument padel control
     void instrumentPadelControl();
     //hands free control 
@@ -484,7 +484,7 @@ Thing 9) fuel system
     2) spark plugs 
     3) not freeze at 0 degrees
  */
-struct fuelsystem
+struct FuelSystem
 {
     //injection pressure
     int injectionPressure = 60;
@@ -498,11 +498,11 @@ struct fuelsystem
     int pumpPower = 23;
 
     //power engine
-    float powerEngine (double CC);
+    float powerEngine(double CC);
     //spark plugs
-    void sparkPlugs (int number);
+    void sparkPlugs(int number);
     //not freeze at 0 degrees
-    void freezeTemp (int whatDegree);
+    void freezeTemp(int whatDegree);
 
 };
 
@@ -519,7 +519,7 @@ Thing 10) truck
     2)tow vehicles
     3)drive long distance
  */
-struct truck
+struct Truck
 {
     //wheels
     int wheels = 4;
@@ -533,11 +533,11 @@ struct truck
     int fuelSystem = 1;
 
     //carry people
-    void maxOccupancy (int = 4);
+    void maxOccupancy(int = 4);
     //tow vehicles
-    void towVehcles (int maxPower =100);
+    void towVehcles(int maxPower = 100);
     //drive long distance
-    double driveLongDistance ();
+    double driveLongDistance();
 
 };
 
