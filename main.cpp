@@ -152,6 +152,30 @@ Thing 1) DAW
     3) mix music
  */
 
+
+struct DAW
+{
+    //amount of memory
+    int amountOfMemory = 100;
+    //size of memory buffer
+    float sizeOfMemoryBuffer = 12.4f;
+    //number of reverb plugins
+    int numberOfReverbPlugins = 4;
+    //amount of tracks
+    int amountOfTracks = 10;
+    //number of inputs
+    int numberofInputs = 2;
+    
+    //master music
+    void masterMusic(bool masteredMusic = true, bool error = false);
+    //process audio
+    int processAudio(int NumberOfTracks = 24);
+    //mix music
+    float mixMusic (float audioLevel = 0.9f);
+    
+
+};
+
 /*
 Thing 2) airport
 5 properties:
@@ -166,6 +190,30 @@ Thing 2) airport
     2) centralise travel departure
     3) service travel industry
  */
+
+   
+struct airport
+{
+//number of planes
+int numberOfPlanes =10;
+//number of floor staff
+int numberOfFloorStaff = 100;
+//number of aeroplane engineers
+int numberOfAeroPlaneEngineers = 50;
+//number of runways
+int numberOfRunways = 5;
+//number of radar
+int numberOfRAdar =1;
+
+//land and takeoff planes
+void landAndTakeOffPlanes (bool hasConfirmation = true);
+//centralise travel departure
+void centraliseTravelDeparture (); 
+//service travel industry
+void serviceTravelIndustry (bool notOvercapacity);
+
+};
+
 
 /*
 Thing 3) farm
@@ -182,6 +230,30 @@ Thing 3) farm
     3) produce milk
  */
 
+
+struct farm
+{
+//number of chickens
+int numberOfChickens = 20;
+//number of cows
+int numberOfCows = 5;
+//number of workers
+int numberOfWorkers = 1;
+//the amount of feed per week
+float amountOfFeedPerWeek = 33.3f;
+//the amount of milk produced
+double amountOfMilkProduced = 22.2;
+
+//grow veg
+void growVeg(std:: string vegType, int carrots);
+//rear animals
+void rearAnimals (bool hasChickens);
+//produce milk
+void produceMilk (int numberOfLitres =100);
+
+};
+
+
 /*
 Thing 4) school
 5 properties:
@@ -196,6 +268,43 @@ Thing 4) school
     2) employ adults
     3) play sports
  */
+struct school
+{
+//number of students
+int numberOfStudents = 100;
+//number of teachers
+int numberOfTeachers = 20; 
+//hours per week of teaching
+float hoursPerWeek = 22.3f;
+//hours per week of lunch
+double hoursOfLunch = 13.2;
+//amount of whiteboards
+int amountOfWhiteBoards = 5;
+
+
+struct schoolStaff
+{
+int staffRoom = 1;
+int numberOfFullTime = 5;
+int numberOfPartTime = 5;
+double totalHoursAllStaff = 110;
+int StaffCarParkSpaces = 10;
+
+void totalBreakTime (int = 36);
+void staffStudentRatio (int = 5);
+void staffTrainer();
+
+};
+
+
+//educate children
+void educateChildren();
+//employ adults
+void employAdults(std::string Over21Yo);
+//play sports
+bool playSports (bool notRaining = true);
+
+};
 
 
 /*
@@ -211,6 +320,33 @@ Thing 5) wheels
     2) aid suspension
     3) turn vehicle
  */
+struct wheels
+{
+
+//wheel diameter
+int wheelDiameter = 50;
+//wheel width
+float wheelWidth = 27.4f;
+//amount of lug nuts
+int amountLugNuts = 30;
+//tyre thread depth
+double tyreThreadDepth = 20.2;
+//tyre pressure
+float tyrePressure = 15.3f;
+
+//carry vehicle
+void carryVehicle();
+//aid suspension
+void aidSuspension (float maxPressureSetting);
+//turn vehicle
+void turnVehicle (double SetmaxDegree);
+
+};
+
+
+
+
+
 
 /*
 Thing 6) engine
@@ -226,6 +362,29 @@ Thing 6) engine
     3) power ABS
  */
 
+struct engine
+{
+//engine type
+bool engineTypeDiesel = true; 
+//engine capacity
+int engineCapacity = 50;
+//amount of valves
+int amountValves = 16;
+//engine torque
+double torque = 29.3;
+//engine sound level
+float SPL = 34.5f;
+
+//move truck
+void moveTruck (int forward);
+//power AC
+void powerAC (int temperature);
+//power ABS
+void ABS (int ABS);
+
+};
+
+
 /*
 Thing 7) seats
 5 properties:
@@ -239,6 +398,29 @@ Thing 7) seats
     2) heat passenger
     3) adjust position
  */
+struct seats
+{
+//number of seats
+int numberSeats = 4;
+//seat width
+int seatWidth = 30;
+//seat recline angle
+float reclineAngle =44.3f;
+//seat heating
+bool seatHeating = true;
+//seat forward movement
+int forwardMovement = 22;
+
+//seat driver
+void seatDriver();
+//heat passenger
+void heatPassangerSeat ();
+//adjust position
+void adjustSeatPosition ();
+
+};
+
+
 
 /*
 Thing 8) steering wheel
@@ -253,21 +435,64 @@ Thing 8) steering wheel
     2) instrument padel control
     3) hands free control
  */
+struct steeringwheel
+{
+//wheel diameter
+int wheelDiameter = 60;
+//wheel circumference
+int wheelCircumference = 10;
+//rotation amount
+int rotationAmount =360;
+//hands free kit controls
+int handsFreeKit = 2;
+//entertainment controls
+int entertainmentControl = 1;
+
+//steer truck
+void steerTruck (int degrees);
+//instrument padel control
+void instrumentPadelControl();
+//hands free control 
+void handsFreeControl();
+
+};
+
+
 
 /*
 Thing 9) fuel system
 5 properties:
-    1) fuel injection pressure
-    2) fuel type
-    3) fuel capacity
-    4) fuel filter amount
-    5) fuel pump power
+    1) injection pressure
+    2) type
+    3) capacity
+    4) filter amount
+    5) pump power
 3 things it can do:
     1) power engine
     2) spark plugs 
     3) not freeze at 0 degrees
  */
+struct fuelsystem
+{
+//injection pressure
+int injectionPressure = 60;
+//type
+bool typeIsDiesel = true;
+//capacity
+double capacity = 34.3;
+//filter amount
+float filterAmount = 33.5f;
+//pump power
+int pumpPower = 23;
 
+//power engine
+float powerEngine (double CC);
+//spark plugs
+void sparkPlugs (int number);
+//not freeze at 0 degrees
+void freezeTemp (int whatDegree);
+
+};
 
 /*
 Thing 10) truck
@@ -282,6 +507,33 @@ Thing 10) truck
     2)tow vehicles
     3)drive long distance
  */
+struct truck
+{
+//wheels
+int wheels = 4;
+//engine
+int engine = 1;
+//seats
+int seats = 4;
+//steering wheel
+int steeringWhee = 1;
+//fuel system
+int fuelSystem = 1;
+
+//carry people
+void maxOccupancy (int = 4);
+//tow vehicles
+void towVehcles (int maxPower =100);
+//drive long distance
+double driveLongDistance ();
+
+
+
+};
+
+
+
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
