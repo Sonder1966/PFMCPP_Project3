@@ -165,6 +165,19 @@ struct DAW
     int amountOfTracks = 10;
     //number of inputs
     int numberofInputs = 2;
+
+    struct DAWProperties
+    {
+        bool canRecordMidi = true;
+        bool canRecordAudio =true;
+        float FrameRate = 29.23f;
+        double bufferSize = 256.5;
+        int numberOfWindow = 3;
+
+        void multiRecord();
+        void playVideo();
+        void convertMidi ();
+    };
     
     //master music
     void masterMusic(bool masteredMusic = true, bool error = false);
@@ -172,7 +185,6 @@ struct DAW
     int processAudio(int NumberOfTracks = 24);
     //mix music
     float mixMusic (float audioLevel = 0.9f);
-    
 
 };
 
@@ -194,23 +206,23 @@ Thing 2) airport
    
 struct airport
 {
-//number of planes
-int numberOfPlanes =10;
-//number of floor staff
-int numberOfFloorStaff = 100;
-//number of aeroplane engineers
-int numberOfAeroPlaneEngineers = 50;
-//number of runways
-int numberOfRunways = 5;
-//number of radar
-int numberOfRAdar =1;
+    //number of planes
+    int numberOfPlanes =10;
+    //number of floor staff
+    int numberOfFloorStaff = 100;
+    //number of aeroplane engineers
+    int numberOfAeroPlaneEngineers = 50;
+    //number of runways
+    int numberOfRunways = 5;
+    //number of radar
+    int numberOfRAdar =1;
 
-//land and takeoff planes
-void landAndTakeOffPlanes (bool hasConfirmation = true);
-//centralise travel departure
-void centraliseTravelDeparture (); 
-//service travel industry
-void serviceTravelIndustry (bool notOvercapacity);
+    //land and takeoff planes
+    void landAndTakeOffPlanes (bool hasConfirmation = true);
+    //centralise travel departure
+    void centraliseTravelDeparture (); 
+    //service travel industry
+    void serviceTravelIndustry (bool notOvercapacity);
 
 };
 
@@ -233,23 +245,23 @@ Thing 3) farm
 
 struct farm
 {
-//number of chickens
-int numberOfChickens = 20;
-//number of cows
-int numberOfCows = 5;
-//number of workers
-int numberOfWorkers = 1;
-//the amount of feed per week
-float amountOfFeedPerWeek = 33.3f;
-//the amount of milk produced
-double amountOfMilkProduced = 22.2;
+    //number of chickens
+    int numberOfChickens = 20;
+    //number of cows
+    int numberOfCows = 5;
+    //number of workers
+    int numberOfWorkers = 1;
+    //the amount of feed per week
+    float amountOfFeedPerWeek = 33.3f;
+    //the amount of milk produced
+    double amountOfMilkProduced = 22.2;
 
-//grow veg
-void growVeg(std:: string vegType, int carrots);
-//rear animals
-void rearAnimals (bool hasChickens);
-//produce milk
-void produceMilk (int numberOfLitres =100);
+    //grow veg
+    void growVeg(std:: string vegType, int carrots);
+    //rear animals
+    void rearAnimals (bool hasChickens);
+    //produce milk
+    void produceMilk (int numberOfLitres =100);
 
 };
 
@@ -270,39 +282,39 @@ Thing 4) school
  */
 struct school
 {
-//number of students
-int numberOfStudents = 100;
-//number of teachers
-int numberOfTeachers = 20; 
-//hours per week of teaching
-float hoursPerWeek = 22.3f;
-//hours per week of lunch
-double hoursOfLunch = 13.2;
-//amount of whiteboards
-int amountOfWhiteBoards = 5;
+    //number of students
+    int numberOfStudents = 100;
+    //number of teachers
+    int numberOfTeachers = 20; 
+    //hours per week of teaching
+    float hoursPerWeek = 22.3f;
+    //hours per week of lunch
+    double hoursOfLunch = 13.2;
+    //amount of whiteboards
+    int amountOfWhiteBoards = 5;
 
 
-struct schoolStaff
-{
-int staffRoom = 1;
-int numberOfFullTime = 5;
-int numberOfPartTime = 5;
-double totalHoursAllStaff = 110;
-int StaffCarParkSpaces = 10;
+    struct schoolStaff
+    {
+        int staffRoom = 1;
+        int numberOfFullTime = 5;
+        int numberOfPartTime = 5;
+        double totalHoursAllStaff = 110;
+        int StaffCarParkSpaces = 10;
 
-void totalBreakTime (int = 36);
-void staffStudentRatio (int = 5);
-void staffTrainer();
+        void totalBreakTime (int = 36);
+        void staffStudentRatio (int = 5);
+        void staffTrainer();
 
-};
+    };
 
 
-//educate children
-void educateChildren();
-//employ adults
-void employAdults(std::string Over21Yo);
-//play sports
-bool playSports (bool notRaining = true);
+    //educate children
+    void educateChildren();
+    //employ adults
+    void employAdults(std::string Over21Yo);
+    //play sports
+    bool playSports (bool notRaining = true);
 
 };
 
@@ -323,23 +335,23 @@ Thing 5) wheels
 struct wheels
 {
 
-//wheel diameter
-int wheelDiameter = 50;
-//wheel width
-float wheelWidth = 27.4f;
-//amount of lug nuts
-int amountLugNuts = 30;
-//tyre thread depth
-double tyreThreadDepth = 20.2;
-//tyre pressure
-float tyrePressure = 15.3f;
+    //wheel diameter
+    int wheelDiameter = 50;
+    //wheel width
+    float wheelWidth = 27.4f;
+    //amount of lug nuts
+    int amountLugNuts = 30;
+    //tyre thread depth
+    double tyreThreadDepth = 20.2;
+    //tyre pressure
+    float tyrePressure = 15.3f;
 
-//carry vehicle
-void carryVehicle();
-//aid suspension
-void aidSuspension (float maxPressureSetting);
-//turn vehicle
-void turnVehicle (double SetmaxDegree);
+    //carry vehicle
+    void carryVehicle();
+    //aid suspension
+    void aidSuspension (float maxPressureSetting);
+    //turn vehicle
+    void turnVehicle (double SetmaxDegree);
 
 };
 
@@ -364,23 +376,23 @@ Thing 6) engine
 
 struct engine
 {
-//engine type
-bool engineTypeDiesel = true; 
-//engine capacity
-int engineCapacity = 50;
-//amount of valves
-int amountValves = 16;
-//engine torque
-double torque = 29.3;
-//engine sound level
-float SPL = 34.5f;
+    //engine type
+    bool engineTypeDiesel = true; 
+    //engine capacity
+    int engineCapacity = 50;
+    //amount of valves
+    int amountValves = 16;
+    //engine torque
+    double torque = 29.3;
+    //engine sound level
+    float SPL = 34.5f;
 
-//move truck
-void moveTruck (int forward);
-//power AC
-void powerAC (int temperature);
-//power ABS
-void ABS (int ABS);
+    //move truck
+    void moveTruck (int forward);
+    //power AC
+    void powerAC (int temperature);
+    //power ABS
+    void ABS (int ABS);
 
 };
 
@@ -400,23 +412,23 @@ Thing 7) seats
  */
 struct seats
 {
-//number of seats
-int numberSeats = 4;
-//seat width
-int seatWidth = 30;
-//seat recline angle
-float reclineAngle =44.3f;
-//seat heating
-bool seatHeating = true;
-//seat forward movement
-int forwardMovement = 22;
+    //number of seats
+    int numberSeats = 4;
+    //seat width
+    int seatWidth = 30;
+    //seat recline angle
+    float reclineAngle =44.3f;
+    //seat heating
+    bool seatHeating = true;
+    //seat forward movement
+    int forwardMovement = 22;
 
-//seat driver
-void seatDriver();
-//heat passenger
-void heatPassangerSeat ();
-//adjust position
-void adjustSeatPosition ();
+    //seat driver
+    void seatDriver();
+    //heat passenger
+    void heatPassangerSeat ();
+    //adjust position
+    void adjustSeatPosition ();
 
 };
 
@@ -437,23 +449,23 @@ Thing 8) steering wheel
  */
 struct steeringwheel
 {
-//wheel diameter
-int wheelDiameter = 60;
-//wheel circumference
-int wheelCircumference = 10;
-//rotation amount
-int rotationAmount =360;
-//hands free kit controls
-int handsFreeKit = 2;
-//entertainment controls
-int entertainmentControl = 1;
+    //wheel diameter
+    int wheelDiameter = 60;
+    //wheel circumference
+    int wheelCircumference = 10;
+    //rotation amount
+    int rotationAmount =360;
+    //hands free kit controls
+    int handsFreeKit = 2;
+    //entertainment controls
+    int entertainmentControl = 1;
 
-//steer truck
-void steerTruck (int degrees);
-//instrument padel control
-void instrumentPadelControl();
-//hands free control 
-void handsFreeControl();
+    //steer truck
+    void steerTruck (int degrees);
+    //instrument padel control
+    void instrumentPadelControl();
+    //hands free control 
+    void handsFreeControl();
 
 };
 
@@ -474,23 +486,23 @@ Thing 9) fuel system
  */
 struct fuelsystem
 {
-//injection pressure
-int injectionPressure = 60;
-//type
-bool typeIsDiesel = true;
-//capacity
-double capacity = 34.3;
-//filter amount
-float filterAmount = 33.5f;
-//pump power
-int pumpPower = 23;
+    //injection pressure
+    int injectionPressure = 60;
+    //type
+    bool typeIsDiesel = true;
+    //capacity
+    double capacity = 34.3;
+    //filter amount
+    float filterAmount = 33.5f;
+    //pump power
+    int pumpPower = 23;
 
-//power engine
-float powerEngine (double CC);
-//spark plugs
-void sparkPlugs (int number);
-//not freeze at 0 degrees
-void freezeTemp (int whatDegree);
+    //power engine
+    float powerEngine (double CC);
+    //spark plugs
+    void sparkPlugs (int number);
+    //not freeze at 0 degrees
+    void freezeTemp (int whatDegree);
 
 };
 
@@ -509,25 +521,23 @@ Thing 10) truck
  */
 struct truck
 {
-//wheels
-int wheels = 4;
-//engine
-int engine = 1;
-//seats
-int seats = 4;
-//steering wheel
-int steeringWhee = 1;
-//fuel system
-int fuelSystem = 1;
+    //wheels
+    int wheels = 4;
+    //engine
+    int engine = 1;
+    //seats
+    int seats = 4;
+    //steering wheel
+    int steeringWhee = 1;
+    //fuel system
+    int fuelSystem = 1;
 
-//carry people
-void maxOccupancy (int = 4);
-//tow vehicles
-void towVehcles (int maxPower =100);
-//drive long distance
-double driveLongDistance ();
-
-
+    //carry people
+    void maxOccupancy (int = 4);
+    //tow vehicles
+    void towVehcles (int maxPower =100);
+    //drive long distance
+    double driveLongDistance ();
 
 };
 
