@@ -209,34 +209,26 @@ struct DAW
     
     
     void masterMusic(bool masteredMusic = true);
-    int processAudio(int NumberOfTracks = 24);
-    float mixMusic(float audioLevel = 0.9f);
+    void processAudio(int NumberOfTracks = 24);
+    void mixMusic(float audioLevel = 0.9f);
 
 };
 
 void DAW::masterMusic(bool masteredMusic)
 {
-    if (numberofInputs == 2)
-    {
-     masteredMusic = true;
-    }
+    if(numberofInputs == 2)
+    masteredMusic = true;
 }
 
-int DAW::processAudio(int NumberOfTracks)
-{
-    {
-    NumberOfTracks = 60;
-    }
-    return 0;
+void DAW::processAudio(int numberOfTracks)
+{  
+    numberOfTracks = 60;  
 }
 
 
-float DAW::mixMusic(float audioLevel)
+void DAW::mixMusic(float audioLevel)
 {
-    {
     audioLevel = 99.9f;
-    }
-    return 0;
 }
 
 /*
@@ -277,12 +269,12 @@ void Airport::landAndTakeOffPlanes(bool hasConfirmation)
 
 void Airport::centraliseTravelDeparture(bool departure)
 {
-      (departure = true);
+    (departure = true);
 }
 
 void Airport::serviceTravelIndustry(bool notOverCapacity) 
 {
-      (notOverCapacity = true);
+    (notOverCapacity = true);
 }   
     
 
@@ -429,18 +421,14 @@ struct Wheels
 bool Wheels::carryVehicle(int numberOfWheels)
 {
   if(numberOfWheels >=4)
-  {
-      return true;
-  }
+    return true;
     return false;
 }
 
 bool Wheels::aidSuspension(float maxPressureSetting)
 {
     if(tyrePressure - maxPressureSetting <=50)
-    {
     return true;
-    }
     return false;
 }
 
@@ -483,14 +471,12 @@ struct Engine
 void Engine::moveTruck(int forward)
 {
     if(torque > forward)
-    {
-        torque += forward;
-    }
+    torque += forward;
 }
 
 void Engine::powerAC(int temperature)
 {
-   temperature += 100;
+    temperature += 100;
 }
 
 void Engine::ABS (int ABS)
@@ -526,7 +512,6 @@ struct Seats
     void seatDriver(bool numberOfDrivers);
     void heatPassangerSeat(int temperature);
     void adjustSeatPosition(bool degree);
-
 };
 
 void Seats::seatDriver(bool numberOfDrivers)
@@ -574,9 +559,7 @@ struct SteeringWheel
 
 void SteeringWheel::steerTruck(int degrees)
 {
-    {
     degrees = 90;
-    }
 }
 
 void SteeringWheel::instrumentPadelControl(bool padelControl)
@@ -620,7 +603,7 @@ struct FuelSystem
 
  void FuelSystem::powerEngine(double CC)
 {
- std::cout << CC << std::endl;
+    std::cout << CC << std::endl;
 }
 
 void FuelSystem::sparkPlugs(int number)
@@ -669,15 +652,13 @@ struct Truck
 void Truck::maxOccupancy(int)
 {
     int potentialOccupy = 100;
-    std::cout << potentialOccupy << std::endl;
+        std::cout << potentialOccupy << std::endl;
 }
 
 void Truck::towVehcles(int maxPower)
 {
     if (maxPower > 100)
-    {
         maxPower = 200;
-    }
 }
 
 void Truck::driveLongDistance(double distance)
