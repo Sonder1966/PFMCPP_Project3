@@ -108,6 +108,49 @@ struct CarWash
     You'll need to insert the Person struct from the video in the space below.
  */
 
+struct Person 
+{
+    int age;
+    int height;
+    float hairLength;
+    float GPA;
+    unsigned int SATScore;
+    int distanceTraveled;
+
+    void run(int howFast, bool startWithLeftFoot);
+
+    struct Foot
+    {
+        int quickness;
+        void stepForward(int stepLength)
+        {
+            quickness = stepLength;
+        }  
+        int stepSize()
+        {
+            return quickness;
+        }
+    };
+
+    Foot leftFoot;
+    Foot rightFoot;
+};
+
+void Person::run(int howFast, bool startWithLeftFoot)
+{
+    if(startWithLeftFoot)
+    {
+        leftFoot.stepForward(howFast+2);
+        rightFoot.stepForward(howFast);
+    }
+    else
+    {
+        rightFoot.stepForward(howFast);
+        leftFoot.stepForward(howFast);
+    }
+    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+}
+
 
 
 
@@ -144,15 +187,11 @@ Thing 1) DAW
 
 struct DAW
 {
-    //amount of memory
+    
     int amountOfMemory = 100;
-    //size of memory buffer
     float sizeOfMemoryBuffer = 12.4f;
-    //number of reverb plugins
     int numberOfReverbPlugins = 4;
-    //amount of tracks
     int amountOfTracks = 10;
-    //number of inputs
     int numberofInputs = 2;
 
     struct DAWProperties
@@ -168,14 +207,37 @@ struct DAW
         void convertMidi();
     };
     
-    //master music
-    void masterMusic(bool masteredMusic = true, bool error = false);
-    //process audio
+    
+    void masterMusic(bool masteredMusic = true);
     int processAudio(int NumberOfTracks = 24);
-    //mix music
     float mixMusic(float audioLevel = 0.9f);
 
 };
+
+void DAW::masterMusic(bool masteredMusic)
+{
+    if (numberofInputs == 2)
+    {
+     masteredMusic = true;
+    }
+}
+
+int DAW::processAudio(int NumberOfTracks)
+{
+    {
+    NumberOfTracks = 60;
+    }
+    return 0;
+}
+
+
+float DAW::mixMusic(float audioLevel)
+{
+    {
+    audioLevel = 99.9f;
+    }
+    return 0;
+}
 
 /*
 Thing 2) airport
@@ -195,25 +257,35 @@ Thing 2) airport
    
 struct Airport
 {
-    //number of planes
+    
     int numberOfPlanes = 10;
-    //number of floor staff
     int numberOfFloorStaff = 100;
-    //number of aeroplane engineers
     int numberOfAeroPlaneEngineers = 50;
-    //number of runways
     int numberOfRunways = 5;
-    //number of radar
     int numberOfRAdar = 1;
 
-    //land and takeoff planes
     void landAndTakeOffPlanes(bool hasConfirmation = true);
-    //centralise travel departure
-    void centraliseTravelDeparture(); 
-    //service travel industry
-    void serviceTravelIndustry(bool notOvercapacity);
+    void centraliseTravelDeparture(bool departure = true); 
+    void serviceTravelIndustry(bool notOverCapacity);
 
 };
+
+void Airport::landAndTakeOffPlanes(bool hasConfirmation)
+{
+    (hasConfirmation=true);
+}
+
+void Airport::centraliseTravelDeparture(bool departure)
+{
+      (departure = true);
+}
+
+void Airport::serviceTravelIndustry(bool notOverCapacity) 
+{
+      (notOverCapacity = true);
+}   
+    
+
 
 
 /*
@@ -234,25 +306,34 @@ Thing 3) farm
 
 struct Farm
 {
-    //number of chickens
+    
     int numberOfChickens = 20;
-    //number of cows
     int numberOfCows = 5;
-    //number of workers
     int numberOfWorkers = 1;
-    //the amount of feed per week
     float amountOfFeedPerWeek = 33.3f;
-    //the amount of milk produced
     double amountOfMilkProduced = 22.2;
 
-    //grow veg
-    void growVeg(std:: string vegType, int carrots);
-    //rear animals
+    
+    void growVeg(std:: string vegType, bool carrots);
     void rearAnimals(bool hasChickens);
-    //produce milk
-    void produceMilk(int numberOfLitres = 100);
-
+    void produceMilk(bool amountOfMilk);
 };
+
+void Farm::growVeg(std:: string vegType, bool carrots)
+{
+    (vegType = carrots);
+}
+
+void Farm::rearAnimals(bool hasChickens)
+{
+    hasChickens = true;
+}
+
+void Farm::produceMilk(bool amountOfMilk)
+{
+   (amountOfMilk = true);
+}
+
 
 
 /*
@@ -271,15 +352,11 @@ Thing 4) school
  */
 struct School
 {
-    //number of students
+    
     int numberOfStudents = 100;
-    //number of teachers
     int numberOfTeachers = 20; 
-    //hours per week of teaching
     float hoursPerWeek = 22.3f;
-    //hours per week of lunch
     double hoursOfLunch = 13.2;
-    //amount of whiteboards
     int amountOfWhiteBoards = 5;
 
 
@@ -297,15 +374,29 @@ struct School
 
     };
 
-
-    //educate children
-    void educateChildren();
-    //employ adults
-    void employAdults(std::string Over21Yo);
-    //play sports
-    bool playSports(bool notRaining = true);
+    void educateChildren(bool amountChildren);
+    void employAdults(int Over21Yo);
+    void playSports(bool notRaining);
 
 };
+
+void School::educateChildren(bool amountChildren)
+{
+    amountChildren = true;    
+}
+
+void School::employAdults(int Over21Yo)
+{
+    if (Over21Yo > 21)
+    {
+        Over21Yo = 22;
+    }  
+}
+
+void School::playSports(bool notRaining)
+{
+    notRaining = true; 
+}
 
 
 /*
@@ -323,30 +414,40 @@ Thing 5) wheels
  */
 struct Wheels
 {
-
-    //wheel diameter
     int wheelDiameter = 50;
-    //wheel width
     float wheelWidth = 27.4f;
-    //amount of lug nuts
     int amountLugNuts = 30;
-    //tyre thread depth
     double tyreThreadDepth = 20.2;
-    //tyre pressure
     float tyrePressure = 15.3f;
 
-    //carry vehicle
-    void carryVehicle();
-    //aid suspension
-    void aidSuspension(float maxPressureSetting);
-    //turn vehicle
+    bool carryVehicle(int numberOfWheels);
+    bool aidSuspension(float maxPressureSetting);
     void turnVehicle(double SetmaxDegree);
 
 };
 
+bool Wheels::carryVehicle(int numberOfWheels)
+{
+  if(numberOfWheels >=4)
+  {
+      return true;
+  }
+    return false;
+}
 
+bool Wheels::aidSuspension(float maxPressureSetting)
+{
+    if(tyrePressure - maxPressureSetting <=50)
+    {
+    return true;
+    }
+    return false;
+}
 
-
+void Wheels::turnVehicle(double setmaxDegree)
+{
+ setmaxDegree = 24;
+} 
 
 
 /*
@@ -365,25 +466,38 @@ Thing 6) engine
 
 struct Engine
 {
-    //engine type
+    
     bool engineTypeDiesel = true; 
-    //engine capacity
     int engineCapacity = 50;
-    //amount of valves
     int amountValves = 16;
-    //engine torque
     double torque = 29.3;
-    //engine sound level
     float SPL = 34.5f;
 
-    //move truck
+
     void moveTruck(int forward);
-    //power AC
     void powerAC(int temperature);
-    //power ABS
     void ABS(int ABS);
 
 };
+
+void Engine::moveTruck(int forward)
+{
+    if(torque > forward)
+    {
+        torque += forward;
+    }
+}
+
+void Engine::powerAC(int temperature)
+{
+   temperature += 100;
+}
+
+void Engine::ABS (int ABS)
+{
+    ABS *=2;
+}
+
 
 
 /*
@@ -401,28 +515,34 @@ Thing 7) seats
  */
 struct Seats
 {
-    //number of seats
+    
     int numberSeats = 4;
-    //seat width
     int seatWidth = 30;
-    //seat recline angle
     float reclineAngle = 44.3f;
-    //seat heating
     bool seatHeating = true;
-    //seat forward movement
     int forwardMovement = 22;
 
-    //seat driver
-    void seatDriver();
-    //heat passenger
-    void heatPassangerSeat();
-    //adjust position
-    void adjustSeatPosition();
+
+    void seatDriver(bool numberOfDrivers);
+    void heatPassangerSeat(int temperature);
+    void adjustSeatPosition(bool degree);
 
 };
 
+void Seats::seatDriver(bool numberOfDrivers)
+    {
+    numberOfDrivers = true;
+    }
 
+void Seats::heatPassangerSeat(int temperature)
+    {
+    temperature = 38;
+    }
 
+void Seats::adjustSeatPosition(bool degree)
+    {
+    degree = true;  
+    }
 /*
 Thing 8) steering wheel
 5 properties:
@@ -438,27 +558,36 @@ Thing 8) steering wheel
  */
 struct SteeringWheel
 {
-    //wheel diameter
+    
     int wheelDiameter = 60;
-    //wheel circumference
     int wheelCircumference = 10;
-    //rotation amount
     int rotationAmount = 360;
-    //hands free kit controls
     int handsFreeKit = 2;
-    //entertainment controls
     int entertainmentControl = 1;
 
-    //steer truck
+    
     void steerTruck(int degrees);
-    //instrument padel control
-    void instrumentPadelControl();
-    //hands free control 
-    void handsFreeControl();
+    void instrumentPadelControl(bool padelControl);
+    void handsFreeControl(bool remote);
 
 };
 
+void SteeringWheel::steerTruck(int degrees)
+{
+    {
+    degrees = 90;
+    }
+}
 
+void SteeringWheel::instrumentPadelControl(bool padelControl)
+{
+padelControl =true;
+}
+
+void SteeringWheel::handsFreeControl( bool remote)
+{
+remote = true;
+}
 
 /*
 Thing 9) fuel system
@@ -475,25 +604,38 @@ Thing 9) fuel system
  */
 struct FuelSystem
 {
-    //injection pressure
+    
     int injectionPressure = 60;
-    //type
     bool typeIsDiesel = true;
-    //capacity
     double capacity = 34.3;
-    //filter amount
     float filterAmount = 33.5f;
-    //pump power
     int pumpPower = 23;
 
-    //power engine
-    float powerEngine(double CC);
-    //spark plugs
+    
+    void powerEngine(double CC);
     void sparkPlugs(int number);
-    //not freeze at 0 degrees
     void freezeTemp(int whatDegree);
 
 };
+
+ void FuelSystem::powerEngine(double CC)
+{
+ std::cout << CC << std::endl;
+}
+
+void FuelSystem::sparkPlugs(int number)
+{
+    number = 10;
+}
+
+void FuelSystem::freezeTemp(int whatDegree)
+{
+    pumpPower = whatDegree;
+}
+
+
+
+
 
 /*
 Thing 10) truck
@@ -510,29 +652,38 @@ Thing 10) truck
  */
 struct Truck
 {
-    //wheels
+    
     int wheels = 4;
-    //engine
     int engine = 1;
-    //seats
     int seats = 4;
-    //steering wheel
     int steeringWhee = 1;
-    //fuel system
     int fuelSystem = 1;
 
-    //carry people
+    
     void maxOccupancy(int = 4);
-    //tow vehicles
     void towVehcles(int maxPower = 100);
-    //drive long distance
-    double driveLongDistance();
+    void driveLongDistance(double distance);
 
 };
 
+void Truck::maxOccupancy(int)
+{
+    int potentialOccupy = 100;
+    std::cout << potentialOccupy << std::endl;
+}
 
+void Truck::towVehcles(int maxPower)
+{
+    if (maxPower > 100)
+    {
+        maxPower = 200;
+    }
+}
 
-
+void Truck::driveLongDistance(double distance)
+{
+    distance = 10;
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
