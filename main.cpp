@@ -217,7 +217,7 @@ struct DAW
 void DAW::masterMusic(bool masteredMusic)
 {
     if(numberofInputs == 2)
-    masteredMusic = true;
+        masteredMusic = true;
 }
 
 void DAW::processAudio(int numberOfTracks)
@@ -264,17 +264,17 @@ struct Airport
 
 void Airport::landAndTakeOffPlanes(bool hasConfirmation)
 {
-    (hasConfirmation=true);
+    hasConfirmation=true;
 }
 
 void Airport::centraliseTravelDeparture(bool departure)
 {
-    (departure = true);
+    departure = true;
 }
 
 void Airport::serviceTravelIndustry(bool notOverCapacity) 
 {
-    (notOverCapacity = true);
+    notOverCapacity = true;
 }   
     
 
@@ -312,19 +312,17 @@ struct Farm
 };
 
 void Farm::growVeg(std:: string vegType, bool carrots)
-{
-    (vegType = carrots);
-}
-
+    {
+        vegType = carrots;
+    }
 void Farm::rearAnimals(bool hasChickens)
-{
-    hasChickens = true;
-}
-
+    {
+        hasChickens = true;
+    }
 void Farm::produceMilk(bool amountOfMilk)
-{
-   (amountOfMilk = true);
-}
+    {
+        amountOfMilk = true;
+    }
 
 
 
@@ -380,9 +378,7 @@ void School::educateChildren(bool amountChildren)
 void School::employAdults(int Over21Yo)
 {
     if (Over21Yo > 21)
-    {
-        Over21Yo = 22;
-    }  
+        Over21Yo = 22;    
 }
 
 void School::playSports(bool notRaining)
@@ -420,21 +416,21 @@ struct Wheels
 
 bool Wheels::carryVehicle(int numberOfWheels)
 {
-  if(numberOfWheels >=4)
-    return true;
-    return false;
+    if(numberOfWheels >=4)
+        return true;
+        return false;
 }
 
 bool Wheels::aidSuspension(float maxPressureSetting)
 {
     if(tyrePressure - maxPressureSetting <=50)
-    return true;
-    return false;
+        return true;
+        return false;
 }
 
 void Wheels::turnVehicle(double setmaxDegree)
 {
- setmaxDegree = 24;
+    setmaxDegree = 24;
 } 
 
 
@@ -471,7 +467,7 @@ struct Engine
 void Engine::moveTruck(int forward)
 {
     if(torque > forward)
-    torque += forward;
+        torque += forward;
 }
 
 void Engine::powerAC(int temperature)
